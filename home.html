@@ -2,14 +2,12 @@
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Home Products | SmartBuy</title>
 
-<meta name="description" content="Discover useful home, kitchen, cleaning, storage and household products recommended by SmartBuy.">
+<meta name="description" content="Discover SmartBuy home products including water filters, storage solutions and useful household equipment.">
 
 <style>
 
@@ -84,7 +82,7 @@ color:#22c55e;
 }
 
 .hero p{
-max-width:700px;
+max-width:720px;
 margin:auto;
 color:#d1d5db;
 font-size:18px;
@@ -101,12 +99,20 @@ background:white;
 padding:30px;
 border-radius:14px;
 box-shadow:0 5px 20px rgba(0,0,0,.06);
-margin-bottom:40px;
+margin-bottom:35px;
 text-align:center;
 }
 
 .intro p{
 color:#667085;
+}
+
+.disclosure{
+background:#fff7ed;
+border-left:5px solid #f59e0b;
+padding:18px;
+margin:30px 0;
+font-size:14px;
 }
 
 .products{
@@ -118,18 +124,18 @@ gap:25px;
 .product{
 background:white;
 border-radius:14px;
-padding:25px;
+padding:28px;
 box-shadow:0 5px 20px rgba(0,0,0,.06);
 display:flex;
 flex-direction:column;
 }
 
 .product-icon{
-font-size:55px;
+font-size:65px;
 text-align:center;
-padding:15px;
 background:#f8fafc;
-border-radius:10px;
+padding:20px;
+border-radius:12px;
 margin-bottom:20px;
 }
 
@@ -146,53 +152,50 @@ width:max-content;
 }
 
 .product h2{
-font-size:22px;
+font-size:23px;
 margin-bottom:12px;
 }
 
 .product p{
 color:#667085;
 margin-bottom:20px;
-flex:1;
 }
 
 .button{
 display:block;
 background:#22c55e;
 color:#052e16;
-padding:13px 18px;
+padding:14px 18px;
 border-radius:8px;
 font-weight:bold;
 text-align:center;
-margin-top:8px;
+margin-top:auto;
 }
 
 .button:hover{
 background:#16a34a;
 }
 
-.review-button{
+.review{
 background:#111827;
 color:white;
+margin-bottom:10px;
 }
 
-.review-button:hover{
+.review:hover{
 background:#1f2937;
 }
 
-.disclosure{
-background:#fff7ed;
-border-left:5px solid #f59e0b;
-padding:18px;
-margin:35px 0;
-font-size:14px;
+.coming{
+background:#e5e7eb;
+color:#374151;
 }
 
 .info{
 background:#eff6ff;
 border-left:5px solid #3b82f6;
 padding:20px;
-margin:30px 0;
+margin-top:35px;
 }
 
 footer{
@@ -212,23 +215,23 @@ footer a:hover{
 color:#22c55e;
 }
 
-@media(max-width:850px){
+@media(max-width:900px){
 
 .products{
 grid-template-columns:repeat(2,1fr);
 }
 
-header{
-flex-direction:column;
-gap:12px;
 }
 
-}
-
-@media(max-width:550px){
+@media(max-width:700px){
 
 .products{
 grid-template-columns:1fr;
+}
+
+header{
+flex-direction:column;
+gap:12px;
 }
 
 nav a{
@@ -243,7 +246,6 @@ padding:50px 20px;
 }
 
 </style>
-
 </head>
 
 
@@ -259,15 +261,11 @@ Smart<span>Buy</span>
 <nav>
 
 <a href="index.html">Home</a>
-
-<a href="index.html#featured">Featured</a>
-
-<a href="index.html#categories">Categories</a>
-
-<a href="index.html#reviews">Reviews</a>
-
+<a href="technology.html">Technology</a>
+<a href="home.html">Home Products</a>
+<a href="health.html">Health</a>
+<a href="digital-products.html">Digital Products</a>
 <a href="about.html">About</a>
-
 <a href="contact.html">Contact</a>
 
 </nav>
@@ -283,8 +281,8 @@ Smart<span>Buy</span>
 </h1>
 
 <p>
-Useful products and practical ideas for making
-your home more comfortable, organized and efficient.
+Practical products for a more organised,
+comfortable and useful home.
 </p>
 
 </section>
@@ -301,8 +299,8 @@ SmartBuy Home Picks
 </h2>
 
 <p>
-We're building this section around useful household products,
-kitchen equipment, storage solutions and everyday home essentials.
+We've selected practical household products that can help
+with everyday tasks, water filtration, storage and DIY jobs.
 </p>
 
 </div>
@@ -324,6 +322,136 @@ earn a commission at no additional cost to you.
 <div class="products">
 
 
+<!-- BRITA -->
+
+<div class="product">
+
+<div class="product-icon">
+💧
+</div>
+
+<span class="tag">
+HOME
+</span>
+
+<h2>
+BRITA MAXTRA PRO Pure Performance
+</h2>
+
+<p>
+Water filter cartridges designed for compatible BRITA
+filter systems. A practical option for households that
+regularly use filtered water.
+</p>
+
+<a
+href="brita-maxtra-pro.html"
+class="button review">
+
+Read SmartBuy Review
+
+</a>
+
+<a
+href="https://www.amazon.co.uk/BRITA-MAXTRA-Water-Filter-Cartridge/dp/B0BSXDVQG7?dib=eyJ2IjoiMSJ9.Ko_I5Oqk46aImHmBafYlbxpFoDXVsTtc0Cj5nbDykzRgVj6YP1yMl92goOpKKmYY7--bEYnrZDRgIWhNYF3nbawxA2p7dmzJy7lCJz5EWEROBNML6ZGKZfJ-CvYUOiJvx3qCmZ-3XTQvzrqn5q1k-yHJUGjwyRD4JWd_1q7iULldmuojdcPrFmz3F9vomWRuxu5e_o-wxRfqGa1UXxWlQBDssM1eNKTxTDWtqO_3YVjMPFp4UgNpgsEQUtxDxuN-4RFGQ8pnUxIpGY938D5VDLh4AbixKfV_VsfJ3FEMSwA.GkjDUk70ZO_4mLmrOF1h6zuJTkOwatVExd1hpvsjl9Y&dib_tag=se&keywords=%F0%9F%92%A7%2BBRITA%2Bwater%2Bfilter&qid=1787285304&sr=8-1&th=1&linkCode=ll2&tag=smartbuy022f-21&linkId=1b761272a9b55205454bec2482fafb86&ref_=as_li_ss_tl"
+target="_blank"
+rel="nofollow sponsored noopener"
+class="button">
+
+🛒 Check Price on Amazon UK
+
+</a>
+
+</div>
+
+
+
+<!-- CAPTAINFIVE -->
+
+<div class="product">
+
+<div class="product-icon">
+📦
+</div>
+
+<span class="tag">
+HOME ORGANISATION
+</span>
+
+<h2>
+CaptainFive Vacuum Storage Bags
+</h2>
+
+<p>
+Vacuum storage bags designed to help reduce the space
+taken up by clothes, bedding and other household items.
+</p>
+
+<a
+href="captainfive-vacuum-storage-bags.html"
+class="button review">
+
+Read SmartBuy Review
+
+</a>
+
+<a
+href="https://www.amazon.co.uk/CaptainFive-Storage-Clothes-Bedding-Organization/dp/B0DR2DLZ6D?crid=1VA2432W1HLMA&dib=eyJ2IjoiMSJ9.HWup1px1QADKsIqJbf1F2K7ceGpJzhtAw5ZG1K5tZHjznSBeMJWONca9qN-hALkxvgmaXdTOn20xcGMFmmicct2YBERErs_glHYtAwP9F9Rxtpqt8xoPlQ11jMjDhHK77uePLz5UHrfE_wtjTZQA6WXUTLaNmgPfbzSRdhCVnGT3LYlcf8XL5PYXqJ0jSkH-Cpo5V2St07VE6Qsph-Mv6VVtrpNRfOhU05rqhGsTmykgDzRnTNYN4-KHhigUKeXaZjFmluGz8xwpvcM4zYc2ZYQls94pjak4rIkmIy_XW1I.3CgzbFqPgxrLnMWeHzDPoFr9GF581-T4CK9lByZ9MOo&dib_tag=se&keywords=%F0%9F%93%A6%2BVacuum%2BStorage%2BBags&qid=1787285470&sprefix=vacuum%2Bstorage%2Bbags%2Caps%2C496&sr=8-1&th=1&linkCode=ll2&tag=smartbuy022f-21&linkId=ec5fdfaf2dd6d25e1a19d616b0a24c94&ref_=as_li_ss_tl"
+target="_blank"
+rel="nofollow sponsored noopener"
+class="button">
+
+🛒 Check Price on Amazon UK
+
+</a>
+
+</div>
+
+
+
+<!-- MASTERPLUG -->
+
+<div class="product">
+
+<div class="product-icon">
+🔌
+</div>
+
+<span class="tag">
+HOME & DIY
+</span>
+
+<h2>
+Masterplug Pro-XT Cable Reel
+</h2>
+
+<p>
+A practical extension cable reel designed for household,
+workshop and DIY applications.
+</p>
+
+<a
+href="masterplug-pro-xt.html"
+class="button review">
+
+Read SmartBuy Review
+
+</a>
+
+<a
+href="https://www.amazon.co.uk/dp/B012GUH6EE?aref=0RCFLle1HG&aaxitk=afce47d26d8373871ef9784d19a64303&pd_rd_plhdr=t&th=1&linkCode=ll2&tag=smartbuy022f-21&linkId=82a86e900b738754c5eff8988b3edbe0&ref_=as_li_ss_tl"
+target="_blank"
+rel="nofollow sponsored noopener"
+class="button">
+
+🛒 Check Price on Amazon UK
+
+</a>
+
+</div>
+
+
+
 <!-- KITCHEN -->
 
 <div class="product">
@@ -341,48 +469,15 @@ Kitchen Essentials
 </h2>
 
 <p>
-Useful kitchen products, cooking equipment and accessories
-for everyday meals.
+Useful kitchen products and cooking accessories will be
+added to SmartBuy soon.
 </p>
 
 <a
-href="index.html#categories"
-class="button review-button">
+href="#"
+class="button coming">
 
-Products Coming Soon
-
-</a>
-
-</div>
-
-
-
-<!-- STORAGE -->
-
-<div class="product">
-
-<div class="product-icon">
-📦
-</div>
-
-<span class="tag">
-COMING SOON
-</span>
-
-<h2>
-Storage & Organization
-</h2>
-
-<p>
-Practical storage solutions designed to help keep your
-home organized and clutter-free.
-</p>
-
-<a
-href="index.html#categories"
-class="button review-button">
-
-Products Coming Soon
+Coming Soon
 
 </a>
 
@@ -407,15 +502,15 @@ Cleaning Products
 </h2>
 
 <p>
-Useful cleaning tools and household products for keeping
-your home fresh and tidy.
+Practical cleaning tools and household products will be
+added as the SmartBuy catalogue grows.
 </p>
 
 <a
-href="index.html#categories"
-class="button review-button">
+href="#"
+class="button coming">
 
-Products Coming Soon
+Coming Soon
 
 </a>
 
@@ -441,80 +536,14 @@ Bedroom Essentials
 
 <p>
 Useful bedroom products, comfort accessories and
-organization ideas.
+organisation solutions are coming soon.
 </p>
 
 <a
-href="index.html#categories"
-class="button review-button">
+href="#"
+class="button coming">
 
-Products Coming Soon
-
-</a>
-
-</div>
-
-
-
-<!-- BATHROOM -->
-
-<div class="product">
-
-<div class="product-icon">
-🛁
-</div>
-
-<span class="tag">
-COMING SOON
-</span>
-
-<h2>
-Bathroom Essentials
-</h2>
-
-<p>
-Practical bathroom products and accessories for
-everyday use.
-</p>
-
-<a
-href="index.html#categories"
-class="button review-button">
-
-Products Coming Soon
-
-</a>
-
-</div>
-
-
-
-<!-- HOUSEHOLD -->
-
-<div class="product">
-
-<div class="product-icon">
-🏡
-</div>
-
-<span class="tag">
-COMING SOON
-</span>
-
-<h2>
-Household Gadgets
-</h2>
-
-<p>
-Interesting and useful gadgets that can make
-everyday household tasks easier.
-</p>
-
-<a
-href="index.html#categories"
-class="button review-button">
-
-Products Coming Soon
+Coming Soon
 
 </a>
 
@@ -529,8 +558,9 @@ Products Coming Soon
 
 <strong>SmartBuy Tip:</strong>
 
-Before buying a household product, compare its features,
-customer reviews, price and suitability for your needs.
+Always check the current Amazon listing for the latest
+price, availability, specifications and customer reviews
+before purchasing.
 
 </div>
 
@@ -551,28 +581,13 @@ Smart choices. Better buys.
 
 <br>
 
-<a href="index.html">
-Home
-</a>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<a href="privacy.html">Privacy Policy</a>
+<a href="affiliate-disclosure.html">Affiliate Disclosure</a>
 
-<a href="about.html">
-About
-</a>
-
-<a href="contact.html">
-Contact
-</a>
-
-<a href="privacy.html">
-Privacy Policy
-</a>
-
-<a href="affiliate-disclosure.html">
-Affiliate Disclosure
-</a>
-
-<br>
-<br>
+<br><br>
 
 <small>
 © 2026 SmartBuy. All rights reserved.
@@ -582,5 +597,4 @@ Affiliate Disclosure
 
 
 </body>
-
 </html>
