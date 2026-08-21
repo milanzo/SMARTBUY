@@ -1,568 +1,765 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>SmartBuy | Smart Choices. Better Buys.</title>
+<meta charset="UTF-8">
 
-  <meta name="description" content="SmartBuy helps you discover useful products, digital tools, courses and services through honest buying guides, reviews and comparisons.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+<title>SmartBuy | Smart Choices. Better Buys.</title>
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f5f7fa;
-      color: #17202a;
-      line-height: 1.6;
-    }
+<meta name="description" content="SmartBuy helps you discover useful products, digital tools, online courses and buying guides so you can make smarter purchasing decisions.">
 
-    a {
-      text-decoration: none;
-    }
+<style>
 
-    header {
-      background: #111827;
-      color: white;
-      padding: 18px 6%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
 
-    .logo {
-      font-size: 28px;
-      font-weight: 800;
-    }
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:#f5f7fa;
+color:#17202a;
+line-height:1.6;
+}
 
-    .logo span {
-      color: #22c55e;
-    }
+a{
+text-decoration:none;
+}
 
-    nav a {
-      color: white;
-      margin-left: 20px;
-      font-size: 14px;
-    }
+header{
+background:#111827;
+color:white;
+padding:18px 6%;
+display:flex;
+justify-content:space-between;
+align-items:center;
+position:sticky;
+top:0;
+z-index:10;
+}
 
-    nav a:hover {
-      color: #22c55e;
-    }
+.logo{
+font-size:30px;
+font-weight:800;
+}
 
-    .hero {
-      background: linear-gradient(135deg, #111827, #1f2937);
-      color: white;
-      padding: 90px 6%;
-      text-align: center;
-    }
+.logo span{
+color:#22c55e;
+}
 
-    .hero h1 {
-      font-size: clamp(40px, 7vw, 68px);
-      margin-bottom: 18px;
-    }
+nav a{
+color:white;
+margin-left:18px;
+font-size:14px;
+}
 
-    .hero h1 span {
-      color: #22c55e;
-    }
+nav a:hover{
+color:#22c55e;
+}
 
-    .hero p {
-      max-width: 720px;
-      margin: auto;
-      font-size: 19px;
-      color: #d1d5db;
-    }
+.hero{
+background:#111827;
+color:white;
+padding:80px 6%;
+text-align:center;
+}
 
-    .hero-button {
-      display: inline-block;
-      margin-top: 30px;
-      padding: 14px 28px;
-      background: #22c55e;
-      color: #052e16;
-      border-radius: 8px;
-      font-weight: 700;
-    }
+.hero-content{
+max-width:850px;
+margin:auto;
+}
 
-    .container {
-      width: 88%;
-      max-width: 1200px;
-      margin: auto;
-    }
+.hero h1{
+font-size:clamp(40px,7vw,65px);
+line-height:1.1;
+margin-bottom:20px;
+}
 
-    section {
-      padding: 65px 0;
-    }
+.hero h1 span{
+color:#22c55e;
+}
 
-    .section-title {
-      text-align: center;
-      margin-bottom: 35px;
-    }
+.hero p{
+font-size:19px;
+color:#d1d5db;
+margin-bottom:30px;
+}
 
-    .section-title h2 {
-      font-size: 34px;
-      margin-bottom: 8px;
-    }
+.search{
+max-width:600px;
+margin:0 auto;
+display:flex;
+background:white;
+padding:5px;
+border-radius:10px;
+}
 
-    .section-title p {
-      color: #667085;
-    }
+.search input{
+flex:1;
+border:0;
+padding:14px;
+font-size:16px;
+outline:none;
+}
 
-    .categories {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 18px;
-    }
+.search button{
+border:0;
+background:#22c55e;
+padding:14px 22px;
+border-radius:7px;
+font-weight:bold;
+cursor:pointer;
+}
 
-    .category {
-      background: white;
-      padding: 28px 20px;
-      border-radius: 12px;
-      text-align: center;
-      box-shadow: 0 4px 15px rgba(0,0,0,.06);
-    }
+section{
+max-width:1100px;
+margin:60px auto;
+padding:0 20px;
+}
 
-    .category .icon {
-      font-size: 38px;
-      margin-bottom: 10px;
-    }
+.section-title{
+text-align:center;
+margin-bottom:35px;
+}
 
-    .category h3 {
-      margin-bottom: 8px;
-    }
+.section-title h2{
+font-size:35px;
+margin-bottom:8px;
+}
 
-    .category p {
-      color: #667085;
-      font-size: 14px;
-    }
+.section-title p{
+color:#667085;
+}
 
-    .articles {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 25px;
-    }
+.grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:25px;
+}
 
-    .card {
-      background: white;
-      border-radius: 14px;
-      overflow: hidden;
-      box-shadow: 0 5px 18px rgba(0,0,0,.07);
-      display: flex;
-      flex-direction: column;
-    }
+.card{
+background:white;
+border-radius:14px;
+padding:28px;
+box-shadow:0 5px 20px rgba(0,0,0,.06);
+display:flex;
+flex-direction:column;
+}
 
-    .card-top {
-      padding: 30px;
-      background: #ecfdf3;
-      font-size: 45px;
-    }
+.card h3{
+font-size:22px;
+margin-bottom:12px;
+}
 
-    .card-content {
-      padding: 25px;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-    }
+.card p{
+color:#667085;
+margin-bottom:20px;
+flex:1;
+}
 
-    .tag {
-      color: #16a34a;
-      font-size: 13px;
-      font-weight: bold;
-      text-transform: uppercase;
-      margin-bottom: 8px;
-    }
+.tag{
+display:inline-block;
+background:#dcfce7;
+color:#166534;
+padding:5px 10px;
+border-radius:20px;
+font-size:12px;
+font-weight:bold;
+margin-bottom:15px;
+}
 
-    .card h3 {
-      font-size: 22px;
-      margin-bottom: 10px;
-    }
+.button{
+display:inline-block;
+background:#22c55e;
+color:#052e16;
+padding:12px 20px;
+border-radius:8px;
+font-weight:bold;
+text-align:center;
+}
 
-    .card p {
-      color: #667085;
-      font-size: 15px;
-      margin-bottom: 20px;
-    }
+.button:hover{
+background:#16a34a;
+}
 
-    .button {
-      display: inline-block;
-      background: #111827;
-      color: white;
-      padding: 11px 18px;
-      border-radius: 7px;
-      font-weight: 700;
-      margin-top: auto;
-      text-align: center;
-    }
+.secondary{
+background:#111827;
+color:white;
+}
 
-    .button:hover {
-      background: #22c55e;
-      color: #052e16;
-    }
+.secondary:hover{
+background:#1f2937;
+}
 
-    .affiliate-box {
-      background: #111827;
-      color: white;
-      border-radius: 15px;
-      padding: 40px;
-      margin-top: 30px;
-    }
+.categories{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:18px;
+}
 
-    .affiliate-box h2 {
-      margin-bottom: 12px;
-    }
+.category{
+background:white;
+padding:25px;
+border-radius:12px;
+text-align:center;
+box-shadow:0 4px 15px rgba(0,0,0,.05);
+}
 
-    .affiliate-box p {
-      color: #d1d5db;
-    }
+.category h3{
+margin-bottom:8px;
+}
 
-    .amazon {
-      background: #fff7ed;
-      border-left: 5px solid #f59e0b;
-    }
+.category p{
+color:#667085;
+font-size:14px;
+}
 
-    .digistore {
-      background: #eff6ff;
-      border-left: 5px solid #2563eb;
-    }
+.about-box{
+background:white;
+border-radius:14px;
+padding:40px;
+text-align:center;
+box-shadow:0 5px 20px rgba(0,0,0,.06);
+}
 
-    .disclosure {
-      background: #fff;
-      border-top: 1px solid #ddd;
-      border-bottom: 1px solid #ddd;
-      padding: 25px 6%;
-      color: #667085;
-      font-size: 13px;
-      text-align: center;
-    }
+.about-box p{
+max-width:750px;
+margin:15px auto 25px;
+color:#667085;
+}
 
-    footer {
-      background: #111827;
-      color: #d1d5db;
-      padding: 45px 6%;
-      text-align: center;
-    }
+.cta{
+background:#111827;
+color:white;
+border-radius:14px;
+padding:50px 30px;
+text-align:center;
+}
 
-    footer .footer-logo {
-      font-size: 25px;
-      font-weight: bold;
-      color: white;
-      margin-bottom: 10px;
-    }
+.cta h2{
+font-size:35px;
+margin-bottom:12px;
+}
 
-    footer span {
-      color: #22c55e;
-    }
+.cta p{
+color:#d1d5db;
+margin-bottom:25px;
+}
 
-    footer a {
-      color: #d1d5db;
-      margin: 0 8px;
-    }
+footer{
+background:#111827;
+color:#d1d5db;
+padding:45px 6%;
+text-align:center;
+margin-top:60px;
+}
 
-    footer a:hover {
-      color: #22c55e;
-    }
+footer a{
+color:#d1d5db;
+margin:0 8px;
+}
 
-    @media (max-width: 700px) {
-      header {
-        flex-direction: column;
-        gap: 12px;
-      }
+footer a:hover{
+color:#22c55e;
+}
 
-      nav a {
-        margin: 0 7px;
-        font-size: 12px;
-      }
+.disclosure{
+font-size:13px;
+max-width:800px;
+margin:20px auto;
+color:#9ca3af;
+}
 
-      .hero {
-        padding: 65px 6%;
-      }
+@media(max-width:800px){
 
-      .hero p {
-        font-size: 17px;
-      }
-    }
-  </style>
+.grid{
+grid-template-columns:1fr;
+}
+
+.categories{
+grid-template-columns:repeat(2,1fr);
+}
+
+header{
+flex-direction:column;
+gap:12px;
+}
+
+nav a{
+margin:0 7px;
+}
+
+}
+
+@media(max-width:500px){
+
+.categories{
+grid-template-columns:1fr;
+}
+
+.hero{
+padding:60px 20px;
+}
+
+.search{
+flex-direction:column;
+background:transparent;
+gap:8px;
+}
+
+.search input{
+border-radius:8px;
+}
+
+.search button{
+border-radius:8px;
+}
+
+}
+
+</style>
+
 </head>
+
 
 <body>
 
-<header>
-  <div class="logo">Smart<span>Buy</span></div>
 
-  <nav>
-    <a href="#home">Home</a>
-    <a href="#categories">Categories</a>
-    <a href="#reviews">Reviews</a>
-    <a href="#about">About</a>
-  </nav>
+<header>
+
+<div class="logo">
+Smart<span>Buy</span>
+</div>
+
+<nav>
+
+<a href="index.html">Home</a>
+
+<a href="#featured">Featured</a>
+
+<a href="#categories">Categories</a>
+
+<a href="#reviews">Reviews</a>
+
+<a href="about.html">About</a>
+
+<a href="contact.html">Contact</a>
+
+</nav>
+
 </header>
 
-<main>
 
-  <section class="hero" id="home">
-    <div class="container">
-      <h1>Smart choices.<br><span>Better buys.</span></h1>
 
-      <p>
-        SmartBuy helps you discover useful products, digital tools,
-        courses and services through practical guides, reviews and comparisons.
-      </p>
+<section class="hero">
 
-      <a href="#reviews" class="hero-button">Explore SmartBuy</a>
-    </div>
-  </section>
+<div class="hero-content">
 
+<h1>
+Smart choices.<br>
+<span>Better buys.</span>
+</h1>
 
-  <section id="categories">
-    <div class="container">
+<p>
+Discover useful products, digital tools, online courses
+and buying guides designed to help you make smarter decisions.
+</p>
 
-      <div class="section-title">
-        <h2>Explore SmartBuy</h2>
-        <p>Discover products and resources worth knowing about.</p>
-      </div>
 
-      <div class="categories">
+<div class="search">
 
-        <div class="category">
-          <div class="icon">🛒</div>
-          <h3>Amazon Finds</h3>
-          <p>Useful products, buying guides and recommendations.</p>
-        </div>
+<input
+type="text"
+id="searchInput"
+placeholder="Search SmartBuy..."
+onkeyup="searchCards()">
 
-        <div class="category">
-          <div class="icon">🤖</div>
-          <h3>AI & Software</h3>
-          <p>Tools that can help you work, create and learn.</p>
-        </div>
+<button onclick="searchCards()">
+Search
+</button>
 
-        <div class="category">
-          <div class="icon">💰</div>
-          <h3>Online Business</h3>
-          <p>Digital products, courses and business resources.</p>
-        </div>
-
-        <div class="category">
-          <div class="icon">❤️</div>
-          <h3>Health & Lifestyle</h3>
-          <p>Products and resources for everyday life.</p>
-        </div>
-
-      </div>
-    </div>
-  </section>
-
-
-  <section id="reviews">
-    <div class="container">
-
-      <div class="section-title">
-        <h2>Featured SmartBuy Guides</h2>
-        <p>Our first recommendations are now available.</p>
-      </div>
-
-      <div class="articles">
-
-        <!-- ARTICLE 1 -->
-
-        <article class="card">
-          <div class="card-top">💻</div>
-
-          <div class="card-content">
-
-            <div class="tag">Online Business</div>
-
-            <h3>Start Affiliate Marketing: A Beginner's Guide</h3>
-
-            <p>
-              Learn the basics of affiliate marketing, how affiliate links
-              work and what beginners should know before getting started.
-            </p>
-
-            <a
-              class="button"
-              href="affiliate-marketing.html"http://heikoboos.com/start-am-like-a-pro/#aff=Miles12"
-              target="_blank"
-              rel="nofollow sponsored noopener">
-              Learn More
-            </a>
-
-          </div>
-        </article>
-
-
-        <!-- ARTICLE 2 -->
-
-        <article class="card">
-          <div class="card-top">📚</div>
-
-          <div class="card-content">
-
-            <div class="tag">Digital Marketing</div>
-
-            <h3>Digital Wealth Academy Review</h3>
-
-            <p>
-              Explore what Digital Wealth Academy covers, including digital
-              marketing, social media, funnels, email marketing and digital products.
-            </p>
-
-            <a
-              class="button"
-              href="digital-wealth-academy.html"https://digital-success.pages.dev/#aff=Miles12"
-              target="_blank"
-              rel="nofollow sponsored noopener">
-              View DWA
-            </a>
-
-          </div>
-        </article>
-
-
-        <!-- ARTICLE 3 -->
-
-        <article class="card">
-          <div class="card-top">🥤</div>
-
-          <div class="card-content">
-
-            <div class="tag">Health & Lifestyle</div>
-
-            <h3>The Smoothie Diet Review</h3>
-
-            <p>
-              Learn what the 21-day Smoothie Diet program includes and
-              what to consider before purchasing a meal-planning program.
-            </p>
-
-            <a
-              class="button"
-              href="the-smoothie-diet.html"https://official.smoothiediet.com/#aff=Miles12"
-              target="_blank"
-              rel="nofollow sponsored noopener">
-              See The Program
-            </a>
-
-          </div>
-        </article>
-
-      </div>
-    </div>
-  </section>
-
-
-  <section>
-    <div class="container">
-
-      <div class="affiliate-box amazon">
-
-        <h2>🛒 Amazon Recommendations</h2>
-
-        <p>
-          We're building a collection of useful Amazon products,
-          buying guides and comparisons. Amazon product links will be
-          added as SmartBuy grows.
-        </p>
-
-        <br>
-
-        <a href="#about" class="button">
-          Coming Soon
-        </a>
-
-      </div>
-
-
-      <div class="affiliate-box digistore">
-
-        <h2>💻 Digital Products & Tools</h2>
-
-        <p>
-          Discover online courses, software, digital products and
-          resources that can help you learn, work and build online.
-        </p>
-
-      </div>
-
-    </div>
-  </section>
-
-
-  <section id="about">
-    <div class="container">
-
-      <div class="section-title">
-        <h2>About SmartBuy</h2>
-      </div>
-
-      <div class="card" style="padding:35px;">
-
-        <p>
-          SmartBuy is an independent product discovery and buying-advice
-          website designed to help people find useful products, digital
-          tools and online resources.
-        </p>
-
-        <br>
-
-        <p>
-          Our goal is simple: help you discover interesting options,
-          understand what they offer and make more informed purchasing
-          decisions.
-        </p>
-
-      </div>
-
-    </div>
-  </section>
-
-</main>
-
-
-<div class="disclosure">
-  <strong>Affiliate Disclosure:</strong>
-  SmartBuy may earn a commission when you purchase products or services
-  through certain links on this website. This does not increase the price
-  you pay.
 </div>
+
+</div>
+
+</section>
+
+
+
+<section id="featured">
+
+<div class="section-title">
+
+<h2>⭐ Featured Picks</h2>
+
+<p>
+Explore some of our featured digital products and resources.
+</p>
+
+</div>
+
+
+<div class="grid" id="productGrid">
+
+
+<div class="card">
+
+<span class="tag">
+AFFILIATE MARKETING
+</span>
+
+<h3>
+Start Affiliate Marketing Like a Pro
+</h3>
+
+<p>
+Learn about affiliate marketing strategies and practical
+approaches designed for people starting an online business.
+</p>
+
+<a
+href="affiliate-marketing.html"
+class="button">
+Read the SmartBuy Review
+</a>
+
+</div>
+
+
+
+<div class="card">
+
+<span class="tag">
+ONLINE BUSINESS
+</span>
+
+<h3>
+Digital Wealth Academy
+</h3>
+
+<p>
+Explore a broad online-business training program covering
+topics such as affiliate marketing, digital products,
+YouTube and content creation.
+</p>
+
+<a
+href="digital-wealth-academy.html"
+class="button">
+Read the SmartBuy Review
+</a>
+
+</div>
+
+
+
+<div class="card">
+
+<span class="tag">
+HEALTH & LIFESTYLE
+</span>
+
+<h3>
+The Smoothie Diet
+</h3>
+
+<p>
+Explore this structured 21-day smoothie program, including
+recipes, schedules and shopping resources.
+</p>
+
+<a
+href="the-smoothie-diet.html"
+class="button">
+Read the SmartBuy Review
+</a>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<section id="categories">
+
+<div class="section-title">
+
+<h2>🛒 Browse Categories</h2>
+
+<p>
+More SmartBuy categories will be added as the website grows.
+</p>
+
+</div>
+
+
+<div class="categories">
+
+
+<div class="category">
+
+<h3>💻 Technology</h3>
+
+<p>
+Gadgets, electronics and useful tech products.
+</p>
+
+</div>
+
+
+<div class="category">
+
+<h3>🏠 Home</h3>
+
+<p>
+Useful products for everyday life.
+</p>
+
+</div>
+
+
+<div class="category">
+
+<h3>💪 Health</h3>
+
+<p>
+Health, fitness and lifestyle products.
+</p>
+
+</div>
+
+
+<div class="category">
+
+<h3>📚 Digital Products</h3>
+
+<p>
+Courses, software, tools and online resources.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<section id="reviews">
+
+<div class="section-title">
+
+<h2>📝 Latest SmartBuy Reviews</h2>
+
+<p>
+Read our guides before deciding whether a product is right for you.
+</p>
+
+</div>
+
+
+<div class="grid">
+
+
+<div class="card">
+
+<h3>
+Affiliate Marketing Guide
+</h3>
+
+<p>
+Our overview of Start Affiliate Marketing Like a Pro and
+what beginners should consider.
+</p>
+
+<a
+href="affiliate-marketing.html"
+class="button secondary">
+Read Article
+</a>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+Digital Wealth Academy
+</h3>
+
+<p>
+Our overview of DWA and the online-business topics covered
+by the program.
+</p>
+
+<a
+href="digital-wealth-academy.html"
+class="button secondary">
+Read Article
+</a>
+
+</div>
+
+
+<div class="card">
+
+<h3>
+The Smoothie Diet
+</h3>
+
+<p>
+Learn about the 21-day smoothie program before deciding
+whether it suits your goals.
+</p>
+
+<a
+href="the-smoothie-diet.html"
+class="button secondary">
+Read Article
+</a>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+<section>
+
+<div class="about-box">
+
+<h2>
+Why SmartBuy?
+</h2>
+
+<p>
+We believe buying decisions should be based on useful information,
+not hype. SmartBuy provides reviews, guides and product information
+to help you research before you buy.
+</p>
+
+<a
+href="about.html"
+class="button">
+Learn About SmartBuy
+</a>
+
+</div>
+
+</section>
+
+
+
+<section>
+
+<div class="cta">
+
+<h2>
+Have a Product in Mind?
+</h2>
+
+<p>
+SmartBuy is growing. More product reviews, buying guides and
+Amazon recommendations will be added over time.
+</p>
+
+<a
+href="contact.html"
+class="button">
+Contact SmartBuy
+</a>
+
+</div>
+
+</section>
+
 
 
 <footer>
 
-  <div class="footer-logo">
-    Smart<span>Buy</span>
-  </div>
+<div class="logo">
+Smart<span>Buy</span>
+</div>
 
-  <p>Smart choices. Better buys.</p>
+<p>
+Smart choices. Better buys.
+</p>
 
-  <br>
+<div class="disclosure">
 
-  <div>
+<p>
+SmartBuy may earn commissions from qualifying purchases
+made through some affiliate links. Affiliate relationships
+do not increase the price you pay.
+</p>
 
-    <a href="index.html">Home</a>
+</div>
 
-    <a href="about.html">About</a>
+<br>
 
-    <a href="contact.html">Contact</a>
+<a href="index.html">Home</a>
 
-    <a href="privacy.html">Privacy Policy</a>
+<a href="about.html">About</a>
 
-    <a href="affiliate-disclosure.html">Affiliate Disclosure</a>
+<a href="contact.html">Contact</a>
 
-  </div>
+<a href="privacy.html">Privacy Policy</a>
 
-  <br><br>
+<a href="affiliate-disclosure.html">
+Affiliate Disclosure
+</a>
 
-  <small>
-    © 2026 SmartBuy. All rights reserved.
-  </small>
+<br><br>
+
+<small>
+© 2026 SmartBuy. All rights reserved.
+</small>
 
 </footer>
 
+
+
+<script>
+
+function searchCards(){
+
+let input =
+document.getElementById("searchInput")
+.value
+.toLowerCase();
+
+let cards =
+document.querySelectorAll(".card");
+
+cards.forEach(function(card){
+
+let text =
+card.innerText.toLowerCase();
+
+if(text.includes(input)){
+card.style.display="flex";
+}else{
+card.style.display="none";
+}
+
+});
+
+}
+
+</script>
+
+
 </body>
+
 </html>
