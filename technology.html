@@ -2,14 +2,12 @@
 <html lang="en">
 
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>Technology | SmartBuy</title>
 
-<meta name="description" content="Discover technology products, gadgets, headphones, computer accessories and useful tech recommendations from SmartBuy.">
+<meta name="description" content="Discover SmartBuy technology picks including wireless earbuds, computer accessories and useful gadgets.">
 
 <style>
 
@@ -84,7 +82,7 @@ color:#22c55e;
 }
 
 .hero p{
-max-width:700px;
+max-width:720px;
 margin:auto;
 color:#d1d5db;
 font-size:18px;
@@ -101,7 +99,7 @@ background:white;
 padding:30px;
 border-radius:14px;
 box-shadow:0 5px 20px rgba(0,0,0,.06);
-margin-bottom:40px;
+margin-bottom:35px;
 text-align:center;
 }
 
@@ -109,27 +107,35 @@ text-align:center;
 color:#667085;
 }
 
+.disclosure{
+background:#fff7ed;
+border-left:5px solid #f59e0b;
+padding:18px;
+margin:30px 0;
+font-size:14px;
+}
+
 .products{
 display:grid;
-grid-template-columns:repeat(3,1fr);
+grid-template-columns:repeat(2,1fr);
 gap:25px;
 }
 
 .product{
 background:white;
 border-radius:14px;
-padding:25px;
+padding:28px;
 box-shadow:0 5px 20px rgba(0,0,0,.06);
 display:flex;
 flex-direction:column;
 }
 
 .product-icon{
-font-size:55px;
+font-size:65px;
 text-align:center;
-padding:15px;
 background:#f8fafc;
-border-radius:10px;
+padding:20px;
+border-radius:12px;
 margin-bottom:20px;
 }
 
@@ -146,53 +152,45 @@ width:max-content;
 }
 
 .product h2{
-font-size:22px;
+font-size:24px;
 margin-bottom:12px;
 }
 
 .product p{
 color:#667085;
 margin-bottom:20px;
-flex:1;
 }
 
 .button{
 display:block;
 background:#22c55e;
 color:#052e16;
-padding:13px 18px;
+padding:14px 18px;
 border-radius:8px;
 font-weight:bold;
 text-align:center;
-margin-top:8px;
+margin-top:auto;
 }
 
 .button:hover{
 background:#16a34a;
 }
 
-.review-button{
+.review{
 background:#111827;
 color:white;
+margin-bottom:10px;
 }
 
-.review-button:hover{
+.review:hover{
 background:#1f2937;
-}
-
-.disclosure{
-background:#fff7ed;
-border-left:5px solid #f59e0b;
-padding:18px;
-margin:35px 0;
-font-size:14px;
 }
 
 .info{
 background:#eff6ff;
 border-left:5px solid #3b82f6;
 padding:20px;
-margin:30px 0;
+margin-top:35px;
 }
 
 footer{
@@ -212,23 +210,15 @@ footer a:hover{
 color:#22c55e;
 }
 
-@media(max-width:850px){
+@media(max-width:700px){
 
 .products{
-grid-template-columns:repeat(2,1fr);
+grid-template-columns:1fr;
 }
 
 header{
 flex-direction:column;
 gap:12px;
-}
-
-}
-
-@media(max-width:550px){
-
-.products{
-grid-template-columns:1fr;
 }
 
 nav a{
@@ -243,7 +233,6 @@ padding:50px 20px;
 }
 
 </style>
-
 </head>
 
 
@@ -259,15 +248,11 @@ Smart<span>Buy</span>
 <nav>
 
 <a href="index.html">Home</a>
-
-<a href="index.html#featured">Featured</a>
-
-<a href="index.html#categories">Categories</a>
-
-<a href="index.html#reviews">Reviews</a>
-
+<a href="technology.html">Technology</a>
+<a href="home.html">Home Products</a>
+<a href="health.html">Health</a>
+<a href="digital-products.html">Digital Products</a>
 <a href="about.html">About</a>
-
 <a href="contact.html">Contact</a>
 
 </nav>
@@ -283,8 +268,8 @@ Smart<span>Buy</span>
 </h1>
 
 <p>
-Discover useful technology, gadgets and accessories
-that can make everyday life easier.
+SmartBuy technology picks: useful gadgets and accessories
+worth researching before you buy.
 </p>
 
 </section>
@@ -297,13 +282,12 @@ that can make everyday life easier.
 <div class="intro">
 
 <h2>
-SmartBuy Technology Picks
+Our Technology Picks
 </h2>
 
 <p>
-We're building this section around useful technology products
-available through Amazon UK. Our goal is to help you compare
-products and research before you buy.
+We've selected practical technology products for everyday
+use, from wireless earbuds to computer accessories.
 </p>
 
 </div>
@@ -334,7 +318,7 @@ earn a commission at no additional cost to you.
 </div>
 
 <span class="tag">
-AMAZON UK
+TECHNOLOGY
 </span>
 
 <h2>
@@ -342,13 +326,14 @@ JBL Wave Buds
 </h2>
 
 <p>
-Wireless earbuds featuring JBL Deep Bass sound, up to
-32 hours of total battery life and IP54-rated earbuds.
+Wireless earbuds with JBL Deep Bass Sound, up to 32 hours
+of total battery life, Bluetooth connectivity and
+water and dust resistance.
 </p>
 
 <a
 href="jbl-wave-buds.html"
-class="button review-button">
+class="button review">
 
 Read SmartBuy Review
 
@@ -360,7 +345,7 @@ target="_blank"
 rel="nofollow sponsored noopener"
 class="button">
 
-Check Price on Amazon UK
+🛒 Check Price on Amazon UK
 
 </a>
 
@@ -368,7 +353,7 @@ Check Price on Amazon UK
 
 
 
-<!-- COMING SOON -->
+<!-- LOGITECH -->
 
 <div class="product">
 
@@ -377,155 +362,33 @@ Check Price on Amazon UK
 </div>
 
 <span class="tag">
-COMING SOON
+TECHNOLOGY
 </span>
 
 <h2>
-Wireless Mice
+Logitech M185 Wireless Mouse
 </h2>
 
 <p>
-We'll compare popular wireless mice for laptops,
-home offices and everyday computer use.
+A compact wireless mouse designed for everyday laptop
+and computer use, with a USB receiver and long battery life.
 </p>
 
 <a
-href="index.html#categories"
-class="button review-button">
+href="logitech-m185.html"
+class="button review">
 
-More Products Coming
+Read SmartBuy Review
 
 </a>
 
-</div>
-
-
-
-<!-- PHONE ACCESSORIES -->
-
-<div class="product">
-
-<div class="product-icon">
-📱
-</div>
-
-<span class="tag">
-COMING SOON
-</span>
-
-<h2>
-Phone Accessories
-</h2>
-
-<p>
-Discover useful phone chargers, stands, cables,
-cases and other smartphone accessories.
-</p>
-
 <a
-href="index.html#categories"
-class="button review-button">
+href="https://www.amazon.co.uk/Logitech-Wireless-Windows-Ambidextrous-Design/dp/B00552K0GM?crid=WMR72H503VCZ&dib=eyJ2IjoiMSJ9.dvwXEDN2TsN5XrdIOrBXduLhSTiMLtn1cA4eocVJRTCyINfVgE8oUiJoJ3S98nivx07fo7ONCtjyLE39_-V7cccCedwK4uCYcmTco-jw1buN1tX4e4bmkOk0vtlfyh0aqfjJ7kI9l7e303sf_j6QXB1xziOPNn8gyzYh2ypqqSh0YbNtZ_pDmYqWUTTvq8y5eUWHT_nS3iblKVX5LAmVzmbpcC7hWYpe7hb8CswWDFM.9kC0G2UmXGreaeYgTzLjhuaWKnosTcU1b2WbDOAOo3w&dib_tag=se&keywords=Logitech%2BM185%2BWireless%2BMouse&qid=1787284883&sprefix=logitech%2Bm185%2Bwireless%2Bmouse%2B%F0%9F%96%B1%EF%B8%8F%2Caps%2C308&sr=8-1&th=1&linkCode=ll2&tag=smartbuy022f-21&linkId=7625097e230b3782c36fa91127629221&ref_=as_li_ss_tl"
+target="_blank"
+rel="nofollow sponsored noopener"
+class="button">
 
-More Products Coming
-
-</a>
-
-</div>
-
-
-
-<!-- LAPTOP ACCESSORIES -->
-
-<div class="product">
-
-<div class="product-icon">
-💻
-</div>
-
-<span class="tag">
-COMING SOON
-</span>
-
-<h2>
-Laptop Accessories
-</h2>
-
-<p>
-We'll be adding useful laptop accessories and
-computer equipment to this section.
-</p>
-
-<a
-href="index.html#categories"
-class="button review-button">
-
-More Products Coming
-
-</a>
-
-</div>
-
-
-
-<!-- SMART HOME -->
-
-<div class="product">
-
-<div class="product-icon">
-🏠
-</div>
-
-<span class="tag">
-COMING SOON
-</span>
-
-<h2>
-Smart Home
-</h2>
-
-<p>
-Explore useful smart-home technology and gadgets
-as the SmartBuy catalogue grows.
-</p>
-
-<a
-href="index.html#categories"
-class="button review-button">
-
-More Products Coming
-
-</a>
-
-</div>
-
-
-
-<!-- GADGETS -->
-
-<div class="product">
-
-<div class="product-icon">
-⚡
-</div>
-
-<span class="tag">
-COMING SOON
-</span>
-
-<h2>
-Useful Gadgets
-</h2>
-
-<p>
-We'll feature interesting and practical gadgets
-worth researching before you buy.
-</p>
-
-<a
-href="index.html#categories"
-class="button review-button">
-
-More Products Coming
+🛒 Check Price on Amazon UK
 
 </a>
 
@@ -540,9 +403,9 @@ More Products Coming
 
 <strong>SmartBuy Tip:</strong>
 
-Product prices, availability, specifications and customer
-reviews can change. Always check the current Amazon UK listing
-before making a purchase.
+Always check the current Amazon listing for the latest
+price, availability, specifications and customer reviews
+before purchasing.
 
 </div>
 
@@ -563,28 +426,13 @@ Smart choices. Better buys.
 
 <br>
 
-<a href="index.html">
-Home
-</a>
+<a href="index.html">Home</a>
+<a href="about.html">About</a>
+<a href="contact.html">Contact</a>
+<a href="privacy.html">Privacy Policy</a>
+<a href="affiliate-disclosure.html">Affiliate Disclosure</a>
 
-<a href="about.html">
-About
-</a>
-
-<a href="contact.html">
-Contact
-</a>
-
-<a href="privacy.html">
-Privacy Policy
-</a>
-
-<a href="affiliate-disclosure.html">
-Affiliate Disclosure
-</a>
-
-<br>
-<br>
+<br><br>
 
 <small>
 © 2026 SmartBuy. All rights reserved.
@@ -594,5 +442,4 @@ Affiliate Disclosure
 
 
 </body>
-
 </html>
