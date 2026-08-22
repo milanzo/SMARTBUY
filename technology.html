@@ -1,238 +1,437 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Technology | SmartBuy</title>
+<title>SmartBuy Technology | Gadgets & Tech Reviews</title>
 
-<meta name="description" content="Discover SmartBuy technology picks including wireless earbuds, computer accessories and useful gadgets.">
+<meta name="description" content="Discover technology products, gadgets and useful tech reviews on SmartBuy.">
 
 <style>
 
 *{
-box-sizing:border-box;
-margin:0;
-padding:0;
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
 }
 
 body{
-font-family:Arial,Helvetica,sans-serif;
-background:#f5f7fa;
-color:#17202a;
-line-height:1.6;
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f5f7fa;
+    color:#17202a;
+    line-height:1.6;
 }
 
 a{
-text-decoration:none;
+    text-decoration:none;
 }
 
+.container{
+    width:92%;
+    max-width:1150px;
+    margin:auto;
+}
+
+
+/* HEADER */
+
 header{
-background:#111827;
-color:white;
-padding:18px 6%;
-display:flex;
-justify-content:space-between;
-align-items:center;
-position:sticky;
-top:0;
-z-index:100;
+    background:#111827;
+    color:white;
+    position:sticky;
+    top:0;
+    z-index:999;
+    box-shadow:0 3px 15px rgba(0,0,0,.15);
+}
+
+.header-inner{
+    min-height:72px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:20px;
 }
 
 .logo{
-font-size:30px;
-font-weight:800;
+    font-size:30px;
+    font-weight:900;
 }
 
 .logo span{
-color:#22c55e;
+    color:#22c55e;
 }
 
 nav{
-display:flex;
-flex-wrap:wrap;
-justify-content:center;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:16px;
 }
 
 nav a{
-color:white;
-margin-left:18px;
-font-size:14px;
+    color:white;
+    font-size:14px;
+    font-weight:600;
 }
 
 nav a:hover{
-color:#22c55e;
+    color:#22c55e;
 }
 
+
+/* HERO */
+
 .hero{
-background:#111827;
-color:white;
-padding:65px 20px;
-text-align:center;
+    background:
+    radial-gradient(circle at 20% 20%,rgba(34,197,94,.22),transparent 30%),
+    radial-gradient(circle at 80% 30%,rgba(59,130,246,.25),transparent 30%),
+    linear-gradient(135deg,#111827,#1f2937);
+
+    color:white;
+    text-align:center;
+    padding:75px 20px;
+}
+
+.hero-content{
+    max-width:800px;
+    margin:auto;
+}
+
+.hero-badge{
+    display:inline-block;
+    background:rgba(34,197,94,.15);
+    border:1px solid rgba(34,197,94,.5);
+    color:#86efac;
+    padding:7px 16px;
+    border-radius:30px;
+    font-size:13px;
+    font-weight:bold;
+    margin-bottom:20px;
 }
 
 .hero h1{
-font-size:clamp(38px,7vw,58px);
-margin-bottom:15px;
+    font-size:clamp(40px,7vw,65px);
+    line-height:1.05;
+    margin-bottom:18px;
 }
 
 .hero h1 span{
-color:#22c55e;
+    color:#22c55e;
 }
 
 .hero p{
-max-width:720px;
-margin:auto;
-color:#d1d5db;
-font-size:18px;
+    color:#d1d5db;
+    font-size:18px;
+    max-width:680px;
+    margin:auto;
 }
 
-main{
-max-width:1100px;
-margin:50px auto;
-padding:0 20px;
+
+/* BREADCRUMB */
+
+.breadcrumb{
+    padding:25px 0;
 }
+
+.breadcrumb a{
+    color:#16a34a;
+    font-weight:bold;
+}
+
+.breadcrumb span{
+    color:#6b7280;
+}
+
+
+/* INTRO */
 
 .intro{
-background:white;
-padding:30px;
-border-radius:14px;
-box-shadow:0 5px 20px rgba(0,0,0,.06);
-margin-bottom:35px;
-text-align:center;
+    text-align:center;
+    padding:10px 20px 45px;
+}
+
+.intro h2{
+    font-size:34px;
+    margin-bottom:10px;
 }
 
 .intro p{
-color:#667085;
+    max-width:700px;
+    margin:auto;
+    color:#6b7280;
 }
 
-.disclosure{
-background:#fff7ed;
-border-left:5px solid #f59e0b;
-padding:18px;
-margin:30px 0;
-font-size:14px;
+
+/* PRODUCTS */
+
+.products-section{
+    padding-bottom:75px;
 }
 
 .products{
-display:grid;
-grid-template-columns:repeat(2,1fr);
-gap:25px;
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:28px;
+    max-width:900px;
+    margin:auto;
 }
 
 .product{
-background:white;
-border-radius:14px;
-padding:28px;
-box-shadow:0 5px 20px rgba(0,0,0,.06);
-display:flex;
-flex-direction:column;
+    background:white;
+    border-radius:18px;
+    overflow:hidden;
+    box-shadow:0 6px 25px rgba(0,0,0,.07);
+    transition:.25s;
 }
 
-.product-icon{
-font-size:65px;
-text-align:center;
-background:#f8fafc;
-padding:20px;
-border-radius:12px;
-margin-bottom:20px;
+.product:hover{
+    transform:translateY(-7px);
+    box-shadow:0 15px 35px rgba(0,0,0,.12);
 }
 
-.tag{
-display:inline-block;
-background:#dcfce7;
-color:#166534;
-padding:5px 10px;
-border-radius:20px;
-font-size:12px;
-font-weight:bold;
-margin-bottom:12px;
-width:max-content;
+.product-image{
+    width:100%;
+    height:300px;
+    background:#f8fafc;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
 }
 
-.product h2{
-font-size:24px;
-margin-bottom:12px;
+.product-image img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    padding:15px;
+}
+
+.product-body{
+    padding:25px;
+}
+
+.product-tag{
+    display:inline-block;
+    background:#dcfce7;
+    color:#166534;
+    padding:5px 10px;
+    border-radius:20px;
+    font-size:11px;
+    font-weight:bold;
+    margin-bottom:10px;
+}
+
+.product h3{
+    font-size:24px;
+    margin-bottom:8px;
 }
 
 .product p{
-color:#667085;
-margin-bottom:20px;
+    color:#6b7280;
+    font-size:15px;
+    margin-bottom:20px;
 }
 
-.button{
-display:block;
-background:#22c55e;
-color:#052e16;
-padding:14px 18px;
-border-radius:8px;
-font-weight:bold;
-text-align:center;
-margin-top:auto;
+.review-btn{
+    display:block;
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:14px;
+    border-radius:9px;
+    font-weight:bold;
+    transition:.25s;
 }
 
-.button:hover{
-background:#16a34a;
+.review-btn:hover{
+    background:#22c55e;
+    color:#052e16;
 }
 
-.review{
-background:#111827;
-color:white;
-margin-bottom:10px;
+
+/* WHY TECH */
+
+.why{
+    background:#111827;
+    color:white;
+    padding:70px 0;
 }
 
-.review:hover{
-background:#1f2937;
+.why-title{
+    text-align:center;
+    margin-bottom:40px;
 }
 
-.info{
-background:#eff6ff;
-border-left:5px solid #3b82f6;
-padding:20px;
-margin-top:35px;
+.why-title h2{
+    font-size:34px;
+    margin-bottom:10px;
 }
+
+.why-title p{
+    color:#9ca3af;
+}
+
+.features{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:25px;
+}
+
+.feature{
+    text-align:center;
+    padding:20px;
+}
+
+.feature-icon{
+    font-size:42px;
+    margin-bottom:12px;
+}
+
+.feature h3{
+    margin-bottom:8px;
+}
+
+.feature p{
+    color:#9ca3af;
+    font-size:14px;
+}
+
+
+/* CTA */
+
+.cta{
+    padding:70px 20px;
+    text-align:center;
+}
+
+.cta-box{
+    max-width:850px;
+    margin:auto;
+    background:linear-gradient(135deg,#dcfce7,#effdf5);
+    border-radius:20px;
+    padding:50px 25px;
+}
+
+.cta h2{
+    font-size:34px;
+    margin-bottom:12px;
+}
+
+.cta p{
+    max-width:650px;
+    margin:0 auto 25px;
+    color:#4b5563;
+}
+
+.btn{
+    display:inline-block;
+    background:#22c55e;
+    color:#052e16;
+    padding:14px 24px;
+    border-radius:9px;
+    font-weight:bold;
+}
+
+
+/* FOOTER */
 
 footer{
-background:#111827;
-color:#d1d5db;
-padding:45px 6%;
-text-align:center;
-margin-top:60px;
+    background:#0b1120;
+    color:#9ca3af;
+    text-align:center;
+    padding:50px 20px;
 }
 
-footer a{
-color:#d1d5db;
-margin:0 8px;
+.footer-logo{
+    color:white;
+    font-size:28px;
+    font-weight:900;
+    margin-bottom:10px;
 }
 
-footer a:hover{
-color:#22c55e;
+.footer-logo span{
+    color:#22c55e;
 }
+
+.footer-links{
+    margin:25px 0;
+    display:flex;
+    justify-content:center;
+    flex-wrap:wrap;
+    gap:18px;
+}
+
+.footer-links a{
+    color:#d1d5db;
+    font-size:14px;
+}
+
+.footer-links a:hover{
+    color:#22c55e;
+}
+
+footer small{
+    color:#6b7280;
+}
+
+
+/* MOBILE */
 
 @media(max-width:700px){
 
-.products{
-grid-template-columns:1fr;
-}
+    .header-inner{
+        flex-direction:column;
+        padding:15px 0;
+    }
 
-header{
-flex-direction:column;
-gap:12px;
-}
+    nav{
+        gap:9px;
+    }
 
-nav a{
-font-size:12px;
-margin:0 5px;
-}
+    nav a{
+        font-size:12px;
+    }
 
-.hero{
-padding:50px 20px;
-}
+    .hero{
+        padding:65px 15px;
+    }
+
+    .hero h1{
+        font-size:45px;
+    }
+
+    .hero p{
+        font-size:16px;
+    }
+
+    .products{
+        grid-template-columns:1fr;
+    }
+
+    .features{
+        grid-template-columns:1fr;
+    }
+
+    .product-image{
+        height:280px;
+    }
+
+    .intro h2,
+    .why-title h2,
+    .cta h2{
+        font-size:30px;
+    }
 
 }
 
 </style>
+
 </head>
 
 
@@ -241,6 +440,8 @@ padding:50px 20px;
 
 <header>
 
+<div class="container header-inner">
+
 <div class="logo">
 Smart<span>Buy</span>
 </div>
@@ -248,14 +449,20 @@ Smart<span>Buy</span>
 <nav>
 
 <a href="index.html">Home</a>
+
 <a href="technology.html">Technology</a>
-<a href="home.html">Home Products</a>
+
+<a href="home.html">Home</a>
+
 <a href="health.html">Health</a>
-<a href="digital-products.html">Digital Products</a>
+
+<a href="digital-products.html">Digital</a>
+
 <a href="about.html">About</a>
-<a href="contact.html">Contact</a>
 
 </nav>
+
+</div>
 
 </header>
 
@@ -263,14 +470,22 @@ Smart<span>Buy</span>
 
 <section class="hero">
 
+<div class="hero-content">
+
+<div class="hero-badge">
+💻 SMARTBUY TECHNOLOGY
+</div>
+
 <h1>
-💻 <span>Technology</span>
+Smart <span>Technology</span>
 </h1>
 
 <p>
-SmartBuy technology picks: useful gadgets and accessories
-worth researching before you buy.
+Discover useful gadgets, accessories and technology
+products worth considering before you buy.
 </p>
+
+</div>
 
 </section>
 
@@ -278,33 +493,35 @@ worth researching before you buy.
 
 <main>
 
+<div class="container">
 
-<div class="intro">
+
+<div class="breadcrumb">
+
+<a href="index.html">Home</a>
+
+<span> → Technology</span>
+
+</div>
+
+
+
+<section class="intro">
 
 <h2>
-Our Technology Picks
+Featured Technology
 </h2>
 
 <p>
-We've selected practical technology products for everyday
-use, from wireless earbuds to computer accessories.
+We've selected technology products that can be useful
+for everyday life, work, entertainment and home setups.
 </p>
 
-</div>
+</section>
 
 
 
-<div class="disclosure">
-
-<strong>Affiliate Disclosure:</strong>
-
-Some links on SmartBuy are affiliate links. If you make a
-qualifying purchase through one of these links, SmartBuy may
-earn a commission at no additional cost to you.
-
-</div>
-
-
+<section class="products-section">
 
 <div class="products">
 
@@ -313,41 +530,37 @@ earn a commission at no additional cost to you.
 
 <div class="product">
 
-<div class="product-icon">
-🎧
+<div class="product-image">
+
+<img
+src="1787360124325.png"
+alt="JBL Wave Buds wireless earbuds"
+loading="lazy">
+
 </div>
 
-<span class="tag">
-TECHNOLOGY
+<div class="product-body">
+
+<span class="product-tag">
+WIRELESS AUDIO
 </span>
 
-<h2>
+<h3>
 JBL Wave Buds
-</h2>
+</h3>
 
 <p>
-Wireless earbuds with JBL Deep Bass Sound, up to 32 hours
-of total battery life, Bluetooth connectivity and
-water and dust resistance.
+A compact pair of wireless earbuds designed for everyday
+listening and hands-free use.
 </p>
 
-<a
-href="jbl-wave-buds.html"
-class="button review">
+<a href="jbl-wave-buds.html" class="review-btn">
 
-Read SmartBuy Review
+Read Full Review →
 
 </a>
 
-<a
-href="https://www.amazon.co.uk/JBL-Wireless-Earbuds-Waterproofing-Hands-Free-Black/dp/B0BHTJLFVP?crid=30QDXEJU91WMC&dib=eyJ2IjoiMSJ9.ipoQbysZMBFln1KVb8TGzgD2nEC0WbdP5meGygQc75nGPfxgvHNDPjw08eYPaID5qEzx-oDTT-gFiVqoxfT1O_3V2Ic2ORBUCHHVWs6bAb_gpNGdNN0-AO5iMsZKm2Q1PmgN8oU6re3UOYDHObjQBeuyd5iKNQGoiF0vZAmRpshb1HXJ_fChEcAvI_CuDwkm-VbHfIeLFKA0ZISGYwxQtKoQGlV8MTKrGzpLkafYoHw.08UF_0O4yn0d5n8HrlMijx2rUZ1QTW2w4jC9X75SWrg&dib_tag=se&keywords=jbl%2Bearbuds&qid=1787282107&sprefix=Jbl%2B%2Caps%2C1583&sr=8-1&th=1&linkCode=ll2&tag=smartbuy022f-21&linkId=3a2ed32037050ef62258cb41aa0c58c4&ref_=as_li_ss_tl"
-target="_blank"
-rel="nofollow sponsored noopener"
-class="button">
-
-🛒 Check Price on Amazon UK
-
-</a>
+</div>
 
 </div>
 
@@ -357,66 +570,157 @@ class="button">
 
 <div class="product">
 
-<div class="product-icon">
-🖱️
+<div class="product-image">
+
+<img
+src="1787361282142.png"
+alt="Logitech M185 wireless mouse"
+loading="lazy">
+
 </div>
 
-<span class="tag">
-TECHNOLOGY
+<div class="product-body">
+
+<span class="product-tag">
+COMPUTER ACCESSORIES
 </span>
 
-<h2>
-Logitech M185 Wireless Mouse
-</h2>
+<h3>
+Logitech M185
+</h3>
 
 <p>
-A compact wireless mouse designed for everyday laptop
-and computer use, with a USB receiver and long battery life.
+A straightforward wireless mouse designed for everyday
+computer use at home, school or work.
 </p>
 
-<a
-href="logitech-m185.html"
-class="button review">
+<a href="logitech-m185.html" class="review-btn">
 
-Read SmartBuy Review
-
-</a>
-
-<a
-href="https://www.amazon.co.uk/Logitech-Wireless-Windows-Ambidextrous-Design/dp/B00552K0GM?crid=WMR72H503VCZ&dib=eyJ2IjoiMSJ9.dvwXEDN2TsN5XrdIOrBXduLhSTiMLtn1cA4eocVJRTCyINfVgE8oUiJoJ3S98nivx07fo7ONCtjyLE39_-V7cccCedwK4uCYcmTco-jw1buN1tX4e4bmkOk0vtlfyh0aqfjJ7kI9l7e303sf_j6QXB1xziOPNn8gyzYh2ypqqSh0YbNtZ_pDmYqWUTTvq8y5eUWHT_nS3iblKVX5LAmVzmbpcC7hWYpe7hb8CswWDFM.9kC0G2UmXGreaeYgTzLjhuaWKnosTcU1b2WbDOAOo3w&dib_tag=se&keywords=Logitech%2BM185%2BWireless%2BMouse&qid=1787284883&sprefix=logitech%2Bm185%2Bwireless%2Bmouse%2B%F0%9F%96%B1%EF%B8%8F%2Caps%2C308&sr=8-1&th=1&linkCode=ll2&tag=smartbuy022f-21&linkId=7625097e230b3782c36fa91127629221&ref_=as_li_ss_tl"
-target="_blank"
-rel="nofollow sponsored noopener"
-class="button">
-
-🛒 Check Price on Amazon UK
+Read Full Review →
 
 </a>
 
 </div>
 
-
 </div>
 
 
-
-<div class="info">
-
-<strong>SmartBuy Tip:</strong>
-
-Always check the current Amazon listing for the latest
-price, availability, specifications and customer reviews
-before purchasing.
-
 </div>
 
+</section>
+
+
+</div>
 
 </main>
 
 
 
+<section class="why">
+
+<div class="container">
+
+<div class="why-title">
+
+<h2>
+Why Browse SmartBuy Technology?
+</h2>
+
+<p>
+We make it easier to discover useful technology products.
+</p>
+
+</div>
+
+
+<div class="features">
+
+
+<div class="feature">
+
+<div class="feature-icon">
+🔎
+</div>
+
+<h3>
+Discover
+</h3>
+
+<p>
+Find interesting technology products in one place.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-icon">
+📖
+</div>
+
+<h3>
+Learn
+</h3>
+
+<p>
+Read straightforward information before making a purchase.
+</p>
+
+</div>
+
+
+<div class="feature">
+
+<div class="feature-icon">
+💡
+</div>
+
+<h3>
+Choose
+</h3>
+
+<p>
+Decide whether a product is right for your needs.
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<section class="cta">
+
+<div class="cta-box">
+
+<h2>
+Looking for More SmartBuys?
+</h2>
+
+<p>
+Explore our other categories to discover useful products
+for your home and everyday life.
+</p>
+
+<a href="home.html" class="btn">
+Explore Home Products →
+</a>
+
+</div>
+
+</section>
+
+
+
 <footer>
 
-<div class="logo">
+<div class="footer-logo">
 Smart<span>Buy</span>
 </div>
 
@@ -424,15 +728,25 @@ Smart<span>Buy</span>
 Smart choices. Better buys.
 </p>
 
-<br>
+
+<div class="footer-links">
 
 <a href="index.html">Home</a>
+
+<a href="technology.html">Technology</a>
+
+<a href="home.html">Home</a>
+
 <a href="about.html">About</a>
+
 <a href="contact.html">Contact</a>
+
 <a href="privacy.html">Privacy Policy</a>
+
 <a href="affiliate-disclosure.html">Affiliate Disclosure</a>
 
-<br><br>
+</div>
+
 
 <small>
 © 2026 SmartBuy. All rights reserved.
