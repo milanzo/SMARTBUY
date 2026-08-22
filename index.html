@@ -9,11 +9,10 @@
 <meta name="description" content="SmartBuy helps you discover useful technology, home products and digital products worth considering before you buy.">
 
 <style>
-
 *{
+    box-sizing:border-box;
     margin:0;
     padding:0;
-    box-sizing:border-box;
 }
 
 html{
@@ -59,7 +58,6 @@ header{
 .logo{
     font-size:30px;
     font-weight:900;
-    letter-spacing:-1px;
 }
 
 .logo span{
@@ -70,11 +68,11 @@ nav{
     display:flex;
     flex-wrap:wrap;
     justify-content:center;
-    gap:18px;
+    gap:16px;
 }
 
 nav a{
-    color:#fff;
+    color:white;
     font-size:14px;
     font-weight:600;
 }
@@ -227,10 +225,10 @@ nav a:hover{
     font-weight:bold;
 }
 
-/* FEATURED */
+/* FEATURED PRODUCTS */
 
 .featured{
-    padding:20px 0 70px;
+    padding:20px 0 75px;
 }
 
 .section-title{
@@ -250,12 +248,12 @@ nav a:hover{
 .products{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:22px;
+    gap:24px;
 }
 
 .product{
     background:white;
-    border-radius:16px;
+    border-radius:18px;
     overflow:hidden;
     box-shadow:0 5px 20px rgba(0,0,0,.07);
     transition:.25s;
@@ -267,12 +265,21 @@ nav a:hover{
 }
 
 .product-image{
-    height:220px;
+    width:100%;
+    height:250px;
+    background:#f8fafc;
     display:flex;
     align-items:center;
     justify-content:center;
-    background:linear-gradient(135deg,#eef2ff,#f8fafc);
-    font-size:90px;
+    overflow:hidden;
+}
+
+.product-image img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    padding:12px;
+    display:block;
 }
 
 .product-body{
@@ -309,6 +316,7 @@ nav a:hover{
     padding:13px;
     border-radius:8px;
     font-weight:bold;
+    transition:.25s;
 }
 
 .review-btn:hover{
@@ -456,7 +464,7 @@ footer small{
     }
 
     nav{
-        gap:10px;
+        gap:9px;
     }
 
     nav a{
@@ -489,7 +497,7 @@ footer small{
     }
 
     .product-image{
-        height:200px;
+        height:270px;
     }
 
 }
@@ -498,7 +506,6 @@ footer small{
 </head>
 
 <body>
-
 
 <header>
 
@@ -522,8 +529,6 @@ Smart<span>Buy</span>
 </header>
 
 
-<!-- HERO -->
-
 <section class="hero">
 
 <div class="hero-content">
@@ -538,7 +543,7 @@ Smart Choices.<br>
 </h1>
 
 <p>
-Discover useful products, honest reviews and buying ideas
+Discover useful products, helpful reviews and buying ideas
 to help you make smarter purchasing decisions.
 </p>
 
@@ -559,13 +564,11 @@ Browse Categories
 </section>
 
 
-<!-- INTRO -->
-
 <section class="intro">
 
 <div class="container">
 
-<h2>Find Your Next Smart Buy</h2>
+<h2>Find Your Next SmartBuy</h2>
 
 <p>
 From everyday technology to useful home products,
@@ -577,8 +580,6 @@ before you spend your money.
 
 </section>
 
-
-<!-- CATEGORIES -->
 
 <section class="categories" id="categories">
 
@@ -643,8 +644,6 @@ Explore Digital →
 </section>
 
 
-<!-- FEATURED PRODUCTS -->
-
 <section class="featured" id="featured">
 
 <div class="container">
@@ -654,7 +653,7 @@ Explore Digital →
 <h2>🔥 Featured SmartBuys</h2>
 
 <p>
-A few products currently featured on SmartBuy.
+Our current product picks.
 </p>
 
 </div>
@@ -668,7 +667,12 @@ A few products currently featured on SmartBuy.
 <div class="product">
 
 <div class="product-image">
-🎧
+
+<img
+src="1787360124325.png"
+alt="JBL Wave Buds wireless earbuds"
+loading="lazy">
+
 </div>
 
 <div class="product-body">
@@ -682,8 +686,8 @@ JBL Wave Buds
 </h3>
 
 <p>
-Wireless earbuds designed for everyday listening,
-with a compact design and hands-free features.
+Wireless earbuds for everyday listening, featuring a
+compact design and hands-free functionality.
 </p>
 
 <a href="jbl-wave-buds.html" class="review-btn">
@@ -700,7 +704,12 @@ Read SmartBuy Review →
 <div class="product">
 
 <div class="product-image">
-🖱️
+
+<img
+src="1787361282142.png"
+alt="Logitech M185 wireless mouse"
+loading="lazy">
+
 </div>
 
 <div class="product-body">
@@ -714,8 +723,8 @@ Logitech M185
 </h3>
 
 <p>
-A simple wireless mouse designed for everyday
-computer use.
+A simple wireless mouse designed for everyday computer
+use at home, school or work.
 </p>
 
 <a href="logitech-m185.html" class="review-btn">
@@ -732,7 +741,12 @@ Read SmartBuy Review →
 <div class="product">
 
 <div class="product-image">
-💧
+
+<img
+src="1787361620037.png"
+alt="BRITA MAXTRA PRO water filter cartridge"
+loading="lazy">
+
 </div>
 
 <div class="product-body">
@@ -746,8 +760,8 @@ BRITA MAXTRA PRO
 </h3>
 
 <p>
-Replacement water-filter cartridges for compatible
-BRITA systems.
+Replacement water-filter cartridges for compatible BRITA
+water-filter systems.
 </p>
 
 <a href="brita-maxtra-pro.html" class="review-btn">
@@ -764,7 +778,12 @@ Read SmartBuy Review →
 <div class="product">
 
 <div class="product-image">
-📦
+
+<img
+src="1787361781379.png"
+alt="CaptainFive vacuum storage bags"
+loading="lazy">
+
 </div>
 
 <div class="product-body">
@@ -778,8 +797,8 @@ CaptainFive Storage Bags
 </h3>
 
 <p>
-A space-saving storage solution for clothes,
-bedding and household organisation.
+A space-saving storage solution for clothes, bedding and
+household organisation.
 </p>
 
 <a href="captainfive-vacuum-storage-bags.html" class="review-btn">
@@ -796,7 +815,12 @@ Read SmartBuy Review →
 <div class="product">
 
 <div class="product-image">
-🔌
+
+<img
+src="1787362090830.png"
+alt="Masterplug Pro-XT cable reel"
+loading="lazy">
+
 </div>
 
 <div class="product-body">
@@ -810,8 +834,8 @@ Masterplug Pro-XT
 </h3>
 
 <p>
-A long-reach cable reel for suitable home,
-workshop and DIY applications.
+A long-reach cable reel for suitable home, workshop and
+DIY applications.
 </p>
 
 <a href="masterplug-pro-xt.html" class="review-btn">
@@ -823,12 +847,16 @@ Read SmartBuy Review →
 </div>
 
 
-<!-- MORE PRODUCTS -->
+<!-- COMING SOON -->
 
 <div class="product">
 
 <div class="product-image">
+
+<div style="font-size:80px;">
 ✨
+</div>
+
 </div>
 
 <div class="product-body">
@@ -842,8 +870,8 @@ More SmartBuys
 </h3>
 
 <p>
-We're continually searching for useful products
-worth featuring on SmartBuy.
+We're continually searching for useful products worth
+featuring on SmartBuy.
 </p>
 
 <a href="#categories" class="review-btn">
@@ -862,8 +890,6 @@ Explore Categories →
 </section>
 
 
-<!-- WHY SMARTBUY -->
-
 <section class="why">
 
 <div class="container">
@@ -873,7 +899,7 @@ Explore Categories →
 <h2>Why SmartBuy?</h2>
 
 <p>
-We want to make product discovery simpler.
+We want to make product discovery simple.
 </p>
 
 </div>
@@ -911,8 +937,8 @@ Helpful Reviews
 </h3>
 
 <p>
-Get straightforward information before deciding
-what to buy.
+Get straightforward information before deciding what
+to buy.
 </p>
 
 </div>
@@ -921,7 +947,7 @@ what to buy.
 <div class="feature">
 
 <div class="feature-icon">
-💰
+💡
 </div>
 
 <h3>
@@ -929,8 +955,7 @@ Smart Decisions
 </h3>
 
 <p>
-Compare features and consider whether a product
-fits your needs.
+Consider features and whether a product fits your needs.
 </p>
 
 </div>
@@ -961,8 +986,6 @@ on the retailer's website.
 </section>
 
 
-<!-- CTA -->
-
 <section class="cta">
 
 <div class="cta-box">
@@ -984,8 +1007,6 @@ Explore Featured Products
 
 </section>
 
-
-<!-- FOOTER -->
 
 <footer>
 
@@ -1014,7 +1035,6 @@ Smart choices. Better buys.
 </small>
 
 </footer>
-
 
 </body>
 </html>
